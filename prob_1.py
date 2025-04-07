@@ -1,4 +1,5 @@
 
+import numpy as np
 def nokia_teclas_aux(a, n, memo,d):
     # Si existe memoizacion, usar esa
     if memo[n-1][d] != 0:
@@ -18,12 +19,7 @@ def nokia_teclas_aux(a, n, memo,d):
 
 def nokia_teclas(a,n):
     # Inicializacion de memoizacion
-    memo = []
-    for i in range(0,n):
-        tem = []
-        for i in range(0,10):
-            tem.append(0)
-        memo.append(tem)
+    memo = np.zeros((n,10))
     # suma de 
     rslt_ = 0
     for i in range(0,10): # para todos los botones 0-9
@@ -49,8 +45,7 @@ a_ = {
     9: [6,8,9]
 }
 # n
-n_ = 1
+n_ = 9
 # resultado
 rslt = nokia_teclas(a_,n_)
 print(rslt)
-
