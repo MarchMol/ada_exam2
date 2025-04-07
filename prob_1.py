@@ -18,6 +18,8 @@ def nokia_teclas_aux(a, n, memo,d):
     return q
 
 def nokia_teclas(a,n):
+    # indexar n
+    n = n-1
     # Inicializacion de memoizacion
     memo = np.zeros((n,10))
     # suma de 
@@ -45,7 +47,7 @@ a_ = {
     9: [6,8,9]
 }
 # n
-n_ = 9
+n_ = 3
 # resultado
 rslt = nokia_teclas(a_,n_)
 print(rslt)
